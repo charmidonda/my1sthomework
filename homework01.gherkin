@@ -1,0 +1,69 @@
+Feature: as user i want to login to my inbox so that i can use inbox facility.
+  Scenario: To verify that user should be able to see categories list on the homepage
+    Given user is already on login page
+    When user open browser
+    And user type url = www.uniqueshopping.com
+    Then User should be able to see categories list on homepage.
+
+  Scenario: To verify that user should be able to navigate to computer category page
+    Given user is already on login page
+    When user open browser
+    And user type url = www.uniqueshopping.com
+    And user select computer
+    Then User should be able to see computer category page
+    And  list of products & filters such as Sort by, Display & View as.
+
+  Scenario: To verify that user should be able to navigate to books category page
+    Given user is already on login page
+    When user open browser
+    And user type url = www.uniqueshopping.com
+    And user select books
+    Then User should be able to see books category page
+    And  list of products and filters such as Sort by, Display & View as.
+
+  Scenario: To verify that user should be able to see the list of terms of Sort by filter
+    Given user is already on login page
+    When user open browser
+    And user type url = www.uniqueshopping.com
+    And user select books
+    And user click on short by
+    Then User should be able to see the list of terms of Sort by filter such as
+    And Name: A to Z
+    And Name: Z to A
+    And Price: Low to High
+    And Price: High to Low
+    And Created on
+
+  Scenario: To verify that user should be able to see the list of terms of Display filter
+    Given user is already on login page
+    When user open browser
+    And user type url = www.uniqueshopping.com
+    And user select books
+    And user click on display
+    Then User should be able to see the list of terms of Display filter such as 4,8,12
+
+  Scenario: To verify that user should be able to see the list of terms of View as filter
+    Given user is already on login page
+    When user open browser
+    And user type url = www.uniqueshopping.com
+    And user select books
+    And user click on View as
+    Then User should be able to see the list of terms of View as filter such as Grid & list
+
+  Scenario: To verify that user should be able to sort products name in alphabetical order A to Z by choosing Name: A to Z from Sort by filter
+    Given user is already on login page
+    When user open browser
+    And user type url = www.uniqueshopping.com
+    And user select books
+    And user click on Short by
+    And user can Click on Name: A to Z
+    Then User should be able to see products name sorted in alphabetical order A to Z.
+
+  Scenario: To verify that user should be able to sort products name in alphabetical order Z To A by choosing Name: Z to A from Sort by filter
+    Given user is already on login page
+    When user open browser
+    And user type url = www.uniqueshopping.com
+    And user select books
+    And user click on Short by
+    And user can Click on Name: Z to A
+    Then User should be able to see products name sorted in alphabetical order Z to A.
